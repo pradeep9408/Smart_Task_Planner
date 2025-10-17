@@ -1,0 +1,163 @@
+.taskManager {
+  padding: var(--spacing-xl);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.header h1 {
+  font-size: var(--font-size-xxl);
+  color: var(--text-color-dark);
+  margin: 0;
+}
+
+.subHeader {
+  font-size: var(--font-size-md);
+  color: #666;
+  flex-basis: 100%;
+  margin-top: var(--spacing-xs);
+}
+
+.newTaskButton {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  white-space: nowrap;
+}
+
+.newTaskButton i {
+  font-size: var(--font-size-sm);
+}
+
+.newTaskButton:hover {
+  background-color: #5a4acb;
+}
+
+.taskList {
+  display: grid;
+  gap: var(--spacing-xl);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.taskCard {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-sm);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.taskName {
+  font-size: var(--font-size-lg);
+  color: var(--text-color-dark);
+  margin: 0;
+}
+
+.taskStatus {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+}
+
+.statusActive {
+  background-color: #e0f2f7;
+  color: #007bff;
+}
+
+.statusCompleted {
+  background-color: #d4edda;
+  color: var(--success-color);
+}
+
+.statusUpcoming {
+  background-color: #fff3cd;
+  color: var(--warning-color);
+}
+
+.statusPending {
+  background-color: #f8d7da;
+  color: var(--danger-color);
+}
+
+.taskDetail {
+  font-size: var(--font-size-md);
+  color: #555;
+  margin-bottom: var(--spacing-sm);
+}
+
+.progressBarContainer {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: var(--border-radius-sm);
+  height: 10px;
+  position: relative;
+  margin-top: var(--spacing-md);
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius-sm);
+  transition: width 0.5s ease-in-out;
+}
+
+.progressText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--font-size-sm);
+  color: var(--text-color-dark);
+  font-weight: bold;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+@media (max-width: 767px) {
+  .taskManager {
+    padding: var(--spacing-md);
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .newTaskButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .taskList {
+    grid-template-columns: 1fr;
+  }
+
+  .taskCard {
+    padding: var(--spacing-md);
+  }
+}

@@ -1,0 +1,120 @@
+.modalDescription {
+  font-size: var(--font-size-md);
+  color: #666;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: var(--spacing-md);
+}
+
+.formGroup label {
+  display: block;
+  font-size: var(--font-size-md);
+  color: var(--text-color-dark);
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+}
+
+.inputField {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-md);
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.2);
+}
+
+.formActions {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-lg);
+}
+
+.createButton {
+  width: 100%;
+  padding: var(--spacing-md);
+  font-size: var(--font-size-lg);
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.createButton:hover {
+  background-color: #5a4acb;
+}
+
+.locationInputGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.locationInputGroup .inputField {
+  margin-bottom: 0;
+}
+
+.geolocationButton {
+  width: 40px;
+  height: 40px;
+  background-color: var(--info-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.geolocationButton:hover {
+  background-color: #117a8b;
+}
+
+.geolocationButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.geolocationButton i {
+  font-size: var(--font-size-md);
+}
+
+.geolocationStatus {
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
+  color: #777;
+}
+
+.mapContainer {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--box-shadow-sm);
+}
+
+@media (max-width: 480px) {
+  .createButton {
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-md);
+  }
+  .locationInputGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .geolocationButton {
+    width: 100%;
+  }
+}

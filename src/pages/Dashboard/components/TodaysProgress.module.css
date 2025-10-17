@@ -1,0 +1,80 @@
+.subText {
+  font-size: var(--font-size-md);
+  color: #777;
+  margin-bottom: var(--spacing-lg);
+}
+
+.progressBars {
+  margin-bottom: var(--spacing-xl);
+}
+
+.progressBarItem {
+  margin-bottom: var(--spacing-md);
+}
+
+.label {
+  font-size: var(--font-size-md);
+  color: var(--text-color-dark);
+  font-weight: 600;
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.barWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.progressBar {
+  flex-grow: 1;
+  height: 10px;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius-sm);
+  transition: width 0.5s ease-in-out;
+}
+
+.completion {
+  font-size: var(--font-size-sm);
+  color: #555;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.overallProgress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+  font-weight: bold;
+}
+
+.overallLabel {
+  font-size: var(--font-size-lg);
+  color: var(--text-color-dark);
+}
+
+.overallValue {
+  font-size: var(--font-size-xxl);
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .overallProgress {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .overallValue {
+    margin-top: var(--spacing-xs);
+  }
+}

@@ -1,0 +1,164 @@
+.analyticsPage {
+  padding: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.header h1 {
+  font-size: var(--font-size-xxl);
+  color: var(--text-color-dark);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.subHeader {
+  font-size: var(--font-size-md);
+  color: #666;
+  flex-basis: 100%;
+  margin-top: var(--spacing-xs);
+}
+
+.reportControls {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.reportTypeDropdown {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-md);
+  background-color: white;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236a5acd%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.7l-130.6%20126.9c-1.6%201.6-3.6%202.5-5.6%202.5s-4-.9-5.6-2.5L18.6%2075.1a17.6%2017.6%200%200%200-24.8%2024.8l130.6%20126.9c9.6%209.6%2024.8%209.6%2034.4%200l130.6-126.9a17.6%2017.6%200%200%200-11.9-30.5z%22/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+.reportTypeDropdown:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.2);
+}
+
+.generateReportButton {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.generateReportButton:hover {
+  background-color: #5a4acb;
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.chartCard {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-sm);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chartTitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-color-dark);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  width: 100%;
+}
+
+.summaryCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.summaryCard {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-sm);
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.summaryCardTitle {
+  font-size: var(--font-size-md);
+  color: #555;
+  margin-bottom: var(--spacing-xs);
+}
+
+.summaryCardValue {
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.summaryCardDescription {
+  font-size: var(--font-size-sm);
+  color: #777;
+  margin-top: var(--spacing-xs);
+}
+
+
+@media (max-width: 767px) {
+  .analyticsPage {
+    padding: var(--spacing-md);
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reportControls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .reportTypeDropdown, .generateReportButton {
+    width: 100%;
+  }
+
+  .chartsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .chartCard {
+    padding: var(--spacing-md);
+  }
+
+  .summaryCardsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}

@@ -1,0 +1,112 @@
+.subText {
+  font-size: var(--font-size-md);
+  color: #777;
+  margin-bottom: var(--spacing-lg);
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.taskItem:last-child {
+  border-bottom: none;
+}
+
+.taskInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-grow: 1;
+}
+
+.taskStatusIcon {
+  font-size: 0.7rem;
+  color: var(--primary-color);
+}
+
+.taskStatusIcon.statusActive {
+  color: var(--primary-color);
+}
+.taskStatusIcon.statusCompleted {
+  color: var(--success-color);
+}
+.taskStatusIcon.statusPending, .taskStatusIcon.statusUpcoming {
+  color: var(--info-color);
+}
+
+.taskDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.taskName {
+  font-size: var(--font-size-md);
+  color: var(--text-color-dark);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.taskTools {
+  font-size: var(--font-size-sm);
+  color: #777;
+}
+
+.taskTime {
+  font-size: var(--font-size-md);
+  color: var(--primary-color);
+  font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.completedText, .pendingText, .upcomingText {
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+  white-space: nowrap;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+}
+
+.completedText {
+  color: var(--success-color);
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.pendingText, .upcomingText {
+  color: var(--info-color);
+  background-color: rgba(23, 162, 184, 0.1);
+}
+
+.noTasksMessage {
+  font-size: var(--font-size-md);
+  color: #888;
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+@media (max-width: 480px) {
+  .taskItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+  .taskTime, .completedText, .pendingText, .upcomingText {
+    width: 100%;
+    text-align: right;
+  }
+
+  .taskInfo {
+    width: 100%;
+  }
+}

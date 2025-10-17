@@ -1,0 +1,19 @@
+.dropdown {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-md);
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236a5acd%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.7l-130.6%20126.9c-1.6%201.6-3.6%202.5-5.6%202.5s-4-.9-5.6-2.5L18.6%2075.1a17.6%2017.6%200%200%200-24.8%2024.8l130.6%20126.9c9.6%209.6%2024.8%209.6%2034.4%200l130.6-126.9a17.6%2017.6%200%200%200-11.9-30.5z%22/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.dropdown:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.2);
+}
