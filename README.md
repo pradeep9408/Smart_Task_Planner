@@ -68,23 +68,3 @@ This section of the web app acts as the user interface for a future cloud backen
     npm start
     ```
 
-## 📸 Screenshots & Demo
-
-### Dashboard
-![Dashboard Screenshot](images/dashboard.png)
-### Profile Page
-![Profile Page Screenshot](images/profile.png)
-### Task Page
-![Task page Screenshot](images/taskmanager.png.png)
-### Creating Technical Task
-![Technical Task Page Screenshot](images/newtask.png)
-### Physical Task
-![Physical Task Page Screenshot](images/physical%20task.png)
-
-### Settings Page
-![Settings Page Screenshot](images/settings.png)
-
-
-## 📄 License
-
-This project is licensed under the MIT License.
